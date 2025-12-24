@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - MERN Stack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Calculator</h1>
+            <p>Perform basic arithmetic operations</p>
+        </div>
+
+        <div class="calculator">
+            <div class="display-container">
+                <div class="display" id="display">0</div>
+                <div class="history" id="history"></div>
+            </div>
+
+            <div class="buttons-grid">
+                <!-- First Row: AC, C, . -->
+                <button class="btn btn-reset" data-action="reset">AC</button>
+                <button class="btn btn-clear" data-action="clear">C</button>
+                <button class="btn btn-decimal" data-value=".">.</button>
+                <button class="btn btn-operator" data-operator="/">/</button>
+
+                <!-- Second Row: 7, 8, 9 -->
+                <button class="btn btn-number" data-value="7">7</button>
+                <button class="btn btn-number" data-value="8">8</button>
+                <button class="btn btn-number" data-value="9">9</button>
+                <button class="btn btn-operator" data-operator="*">*</button>
+
+                <!-- Third Row: 4, 5, 6 -->
+                <button class="btn btn-number" data-value="4">4</button>
+                <button class="btn btn-number" data-value="5">5</button>
+                <button class="btn btn-number" data-value="6">6</button>
+                <button class="btn btn-operator" data-operator="-">-</button>
+
+                <!-- Fourth Row: 1, 2, 3 -->
+                <button class="btn btn-number" data-value="1">1</button>
+                <button class="btn btn-number" data-value="2">2</button>
+                <button class="btn btn-number" data-value="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+
+                <!-- Fifth Row: 0, Equals -->
+                <button class="btn btn-number btn-zero" data-value="0">0</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </div>
+
+        <div class="info">
+            <p>💡 Tip: Use keyboard for faster input (0-9, +, -, *, /, Enter, Backspace)</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
