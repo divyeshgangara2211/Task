@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input Form - MERN Stack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dynamic Form</h1>
+            <p>Add or remove input fields as needed</p>
+        </div>
+
+        <div class="form-card">
+            <div class="success-message" id="successMessage">
+                ✓ Form submitted successfully! Data logged to console.
+            </div>
+
+            <form id="dynamicForm">
+                <div class="fields-section">
+                    <div class="fields-header">Form Fields</div>
+                    <div id="fieldsContainer"></div>
+                </div>
+
+                <button type="button" class="btn btn-add" id="addFieldBtn">
+                    + Add Input Field
+                </button>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit" id="submitBtn">
+                        Submit Form
+                    </button>
+                    <button type="reset" class="btn btn-reset" id="resetBtn">
+                        Clear All
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
