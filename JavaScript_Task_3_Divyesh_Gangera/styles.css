@@ -1,0 +1,271 @@
+:root {
+  --color-bg-primary: rgba(252, 252, 249, 1);
+  --color-bg-secondary: rgba(255, 255, 253, 1);
+  --color-text-primary: rgba(19, 52, 59, 1);
+  --color-text-secondary: rgba(98, 108, 113, 1);
+  --color-primary: rgba(33, 128, 141, 1);
+  --color-primary-hover: rgba(29, 116, 128, 1);
+  --color-primary-active: rgba(26, 104, 115, 1);
+  --color-border: rgba(94, 82, 64, 0.2);
+  --color-muted-border: rgba(94, 82, 64, 0.12);
+  --color-focus-ring: rgba(33, 128, 141, 0.4);
+  --color-ellipsis: rgba(98, 108, 113, 1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  --radius-base: 8px;
+  --radius-lg: 12px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, rgba(240, 248, 250, 1) 100%);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  padding: var(--space-20);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+}
+
+.header p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Card */
+
+.card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-24);
+}
+
+/* Table header row */
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-16);
+  gap: var(--space-16);
+}
+
+.table-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.page-size-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.page-size-control select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Table */
+
+.table-wrapper {
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-muted-border);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-bg-secondary);
+}
+
+thead {
+  background: rgba(33, 128, 141, 0.06);
+}
+
+th,
+td {
+  padding: var(--space-12) var(--space-16);
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(94, 82, 64, 0.08);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(33, 128, 141, 0.02);
+}
+
+/* Footer */
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-16);
+  margin-top: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.rows-info {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.pagination-btn,
+.pagination-page {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--space-12);
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.pagination-btn:hover:not(:disabled),
+.pagination-page:hover:not(.active):not(:disabled) {
+  background: rgba(33, 128, 141, 0.08);
+  border-color: var(--color-primary);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Active page */
+
+.pagination-page.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+/* Ellipsis */
+
+.pagination-ellipsis {
+  min-width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ellipsis);
+  font-size: 16px;
+}
+
+/* Hint */
+
+.hint {
+  margin-top: var(--space-16);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .card {
+    padding: var(--space-16);
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  th,
+  td {
+    padding: var(--space-8) var(--space-12);
+  }
+
+  .table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagination {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .pagination-btn,
+  .pagination-page {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 var(--space-8);
+    font-size: 12px;
+  }
+}

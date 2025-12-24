@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Table Pagination - MERN Stack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Paginated Table</h1>
+      <p>Browse dummy data using previous/next and numbered pagination</p>
+    </header>
+
+    <main class="card">
+      <div class="table-header">
+        <h2 class="table-title">Users Table</h2>
+        <div class="page-size-control">
+          <label for="pageSizeSelect">Rows per page:</label>
+          <select id="pageSizeSelect">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-footer">
+        <div class="rows-info" id="rowsInfo">
+          Showing 0 to 0 of 0 entries
+        </div>
+
+        <nav class="pagination" aria-label="Table pagination">
+          <button
+            class="pagination-btn prev"
+            id="prevBtn"
+            type="button"
+          >
+            ‹ Prev
+          </button>
+
+          <div class="pagination-pages" id="paginationPages">
+            <!-- Dynamic numbered buttons + ellipsis -->
+          </div>
+
+          <button
+            class="pagination-btn next"
+            id="nextBtn"
+            type="button"
+          >
+            Next ›
+          </button>
+        </nav>
+      </div>
+    </main>
+
+    <p class="hint">
+      💡 Tip: Use Left/Right arrow keys to move between pages.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
