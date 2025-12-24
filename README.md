@@ -571,9 +571,9 @@ This repository demonstrates solid web development fundamentals across 4 progres
 ---
 
 **Table of Contents Quick Links:**
-- [Task 1: Dynamic Input Form](./Task_1_Dynamic_Input_Form/README.md)
-- [Task 2: Calculator](./Task_2_Calculator/README.md)
-- [Task 3: Table Pagination](./Task_3_Table_Pagination/README.md)
-- [Task 4: Drag & Drop Uploader](./Task_4_Drag_Drop_Uploader/README.md)
+- [Task 1: Dynamic Input Form](./JavaScript_Task_1_Divyesh_Gangera/README.md)
+- [Task 2: Calculator](./JavaScript_Task_2_Divyesh_Gangera/README.md)
+- [Task 3: Table Pagination](./JavaScript_Task_3_Divyesh_Gangera/README.md)
+- [Task 4: Drag & Drop Uploader](./JavaScript_Task_4_Divyesh_Gangera/README.md)
 
 ---
