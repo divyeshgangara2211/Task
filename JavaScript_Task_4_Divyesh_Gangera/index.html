@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Drag & Drop Uploader - Task 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📸 Image Upload</h1>
+            <p>Drag and drop your image or click to select</p>
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📁</div>
+            <p>Drag & Drop Image Here</p>
+            <span>or click to browse your device</span>
+            <input type="file" id="fileInput" accept="image/*" />
+        </div>
+
+        <div class="preview-section" id="previewSection">
+            <div class="preview-header">Preview</div>
+            <div class="image-preview">
+                <img id="previewImage" src="" alt="Preview" />
+                <div class="image-info">
+                    <div class="info-row">
+                        <span class="info-label">Filename:</span>
+                        <span class="info-value" id="fileName">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Size:</span>
+                        <span class="info-value" id="fileSize">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Type:</span>
+                        <span class="info-value" id="fileType">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Dimensions:</span>
+                        <span class="info-value" id="imageDimensions">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value">
+                            <span class="status-badge status-badge--success">Ready</span>
+                        </span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn--primary" id="uploadBtn">Upload Image</button>
+                        <button class="btn btn--secondary" id="clearBtn">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert" id="successAlert"></div>
+        <div class="alert" id="errorAlert"></div>
+        <div class="alert" id="warningAlert"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

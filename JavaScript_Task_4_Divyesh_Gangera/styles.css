@@ -1,0 +1,327 @@
+:root {
+    --color-primary: #3182ce;
+    --color-primary-hover: #2c5aa0;
+    --color-primary-active: #1e3a8a;
+    --color-success: #22c55e;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-border: #e2e8f0;
+    --color-focus-ring: rgba(49, 130, 206, 0.4);
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --radius-base: 8px;
+    --radius-lg: 12px;
+    --duration-fast: 150ms;
+    --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-16);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-32);
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: var(--space-8);
+    color: var(--color-text);
+}
+
+.header p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.upload-area {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-32);
+    text-align: center;
+    background-color: var(--color-surface);
+    transition: all var(--duration-fast) var(--ease-standard);
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--color-primary);
+    background-color: #f0f7ff;
+}
+
+.upload-area.drag-over {
+    border-color: var(--color-primary);
+    background-color: #eff6ff;
+    box-shadow: 0 0 0 4px var(--color-focus-ring);
+    transform: scale(1.02);
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--space-16);
+    background: linear-gradient(135deg, var(--color-primary), #2563eb);
+    border-radius: var(--radius-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.upload-area p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-8);
+}
+
+.upload-area span {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-8);
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+.preview-section {
+    margin-top: var(--space-32);
+    display: none;
+}
+
+.preview-section.active {
+    display: block;
+}
+
+.preview-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-12);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.image-preview {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.image-info {
+    padding: var(--space-16);
+    border-top: 1px solid var(--color-border);
+    background-color: #fafbfc;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: var(--space-8);
+    line-height: 1.5;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--color-text);
+    font-weight: 600;
+    word-break: break-word;
+    text-align: right;
+    margin-left: var(--space-12);
+    max-width: 60%;
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-12);
+    margin-top: var(--space-16);
+}
+
+.btn {
+    flex: 1;
+    padding: var(--space-10) var(--space-16);
+    border: none;
+    border-radius: var(--radius-base);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-standard);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: var(--color-focus-ring) 0 0 0 3px;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover:not(:disabled) {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.btn--primary:active:not(:disabled) {
+    background-color: var(--color-primary-active);
+    transform: translateY(0);
+}
+
+.btn--secondary {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background-color: #cbd5e1;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.alert {
+    padding: var(--space-12) var(--space-16);
+    border-radius: var(--radius-base);
+    font-size: 13px;
+    margin-top: var(--space-16);
+    display: none;
+    border: 1px solid;
+}
+
+.alert.active {
+    display: block;
+}
+
+.alert--success {
+    background-color: #f0fdf4;
+    border-color: var(--color-success);
+    color: #16a34a;
+}
+
+.alert--error {
+    background-color: #fef2f2;
+    border-color: var(--color-error);
+    color: #dc2626;
+}
+
+.alert--warning {
+    background-color: #fffbeb;
+    border-color: var(--color-warning);
+    color: #d97706;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: var(--space-4) var(--space-8);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge--success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-badge--info {
+    background-color: #dbeafe;
+    color: #0c4a6e;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: var(--space-12);
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .upload-area {
+        padding: var(--space-20);
+    }
+
+    .upload-area p {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .info-value {
+        max-width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+}
